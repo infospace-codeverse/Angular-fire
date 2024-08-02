@@ -13,7 +13,7 @@ import {
 import { TodoInterface } from '../../types/todo.interface';
 import { CommonModule } from '@angular/common';
 import { TodosService } from '../../services/todos.service';
-// import { TodosFirebaseService } from '../../services/todosFirebase.service';
+import { TodosFirebaseService } from '../../services/todosFirebase.service';
 
 @Component({
   selector: 'app-todos-todo',
@@ -30,7 +30,7 @@ export class TodoComponent {
   @ViewChild('textInput') textInput?: ElementRef;
 
   todosService = inject(TodosService);
-  // todosFirebaseService = inject(TodosFirebaseService);
+  todosFirebaseService = inject(TodosFirebaseService);
   editingText: string = '';
 
   ngOnInit(): void {
@@ -56,11 +56,11 @@ export class TodoComponent {
       isCompleted: this.todo.isCompleted,
     };
 
-    // this.todosFirebaseService
-    //   .updateTodo(this.todo.id, dataToUpdate)
-    //   .subscribe(() => {
-    //     this.todosService.changeTodo(this.todo.id, this.editingText);
-    //   });
+    this.todosFirebaseService
+      .updateTodo(this.todo.id, dataToUpdate)
+      .subscribe(() => {
+        this.todosService.changeTodo(this.todo.id, this.editingText);
+      });
 
     this.setEditingId.emit(null);
   }
@@ -70,9 +70,9 @@ export class TodoComponent {
   }
 
   removeTodo(): void {
-    // this.todosFirebaseService.removeTodo(this.todo.id).subscribe(() => {
-    //   this.todosService.removeTodo(this.todo.id);
-    // });
+    this.todosFirebaseService.removeTodo(this.todo.id).subscribe(() => {
+      this.todosService.removeTodo(this.todo.id);
+    });
   }
 
   toggleTodo(): void {
@@ -80,10 +80,10 @@ export class TodoComponent {
       text: this.todo.text,
       isCompleted: !this.todo.isCompleted,
     };
-    // this.todosFirebaseService
-    //   .updateTodo(this.todo.id, dataToUpdate)
-    //   .subscribe(() => {
-    //     this.todosService.toggleTodo(this.todo.id);
-    //   });
+    this.todosFirebaseService
+      .updateTodo(this.todo.id, dataToUpdate)
+      .subscribe(() => {
+        this.todosService.toggleTodo(this.todo.id);
+      });
   }
 }
