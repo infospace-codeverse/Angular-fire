@@ -1,7 +1,7 @@
 <form (ngSubmit)="addTask()">
   <input
-    [(ngModel)]="taskTitle"
-    name="title"
+    ngModel="taskTitle"
+    name="taskTitle"
     placeholder="Add a new task"
     required
   />
