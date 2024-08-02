@@ -5,7 +5,7 @@ import { FilterEnum } from '../types/filter.enum';
 @Injectable({
   providedIn: 'root',
 })
-export class TodoService {
+export class TodosService {
   todosSig = signal<TodoInterface[]>([]);
   filterSig = signal<FilterEnum>(FilterEnum.all);
 
