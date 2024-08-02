@@ -6,7 +6,6 @@
     autoFocus
     [value]="text"
     (keyup)="changeText($event)"
+    (keyup.enter)="addTodo()"
   />
 </header>
-
-<!-- (keyup.enter)="addTodo()" -->

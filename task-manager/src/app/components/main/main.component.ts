@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { TodosService } from '../../services/todos.service';
 import { forkJoin } from 'rxjs';
 import { FilterEnum } from '../../types/filter.enum';
-import { TodosFirebaseService } from '../../services/todosFirebase.service';
+// import { TodosFirebaseService } from '../../services/todosFirebase.service';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-todos-main',
   standalone: true,
   imports: [CommonModule, TodoComponent],
   templateUrl: './main.component.html',
@@ -15,7 +15,7 @@ import { TodosFirebaseService } from '../../services/todosFirebase.service';
 })
 export class MainComponent {
   todosService = inject(TodosService);
-  todosFirebaseService = inject(TodosFirebaseService);
+  // todosFirebaseService = inject(TodosFirebaseService);
   editingId: string | null = null;
 
   visibleTodos = computed(() => {
@@ -41,10 +41,10 @@ export class MainComponent {
   toggleAllTodos(event: Event): void {
     const target = event.target as HTMLInputElement;
     const requests$ = this.todosService.todosSig().map((todo) => {
-      return this.todosFirebaseService.updateTodo(todo.id, {
-        text: todo.text,
-        isCompleted: target.checked,
-      });
+      // return this.todosFirebaseService.updateTodo(todo.id, {
+      //   text: todo.text,
+      //   isCompleted: target.checked,
+      // });
     });
     forkJoin(requests$).subscribe(() => {
       this.todosService.toggleAll(target.checked);
