@@ -1,10 +1,10 @@
-<footer class="footer" [ngClass]="{ hidden: noTodosClass() }">
-  <span class="todo-count">
+<footer class="flex flex-row-reverse border justify-around py-10 gap-20" [ngClass]="{ hidden: noTodosClass() }">
+  <span class="text-lg text-blue-500">
     <strong>{{ activeCount() }}</strong>
     {{ itemsLeftText() }}
   </span>
-  <ul class="filters">
-    <li>
+  <ul class="flex justify-around text-2xl gap-5 text-blue-700">
+    <li class="border rounded-lg py-2 px-5">
       <a
         href="/"
         [ngClass]="{ selected: filterSig() === filterEnum.all }"
@@ -12,7 +12,7 @@
         >All</a
       >
     </li>
-    <li>
+    <li class="border rounded-lg py-2 px-3">
       <a
         href="/"
         [ngClass]="{ selected: filterSig() === filterEnum.active }"
@@ -20,7 +20,7 @@
         >Active</a
       >
     </li>
-    <li>
+    <li class="border rounded-lg py-2 px-2">
       <a
         href="/"
         [ngClass]="{ selected: filterSig() === filterEnum.completed }"

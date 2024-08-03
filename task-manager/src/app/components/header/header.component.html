@@ -1,7 +1,10 @@
-<header class="header">
-  <h1>todos</h1>
+<header class="flex flex-col gap-1 justify-center items-center">
+  <img src="assets/logo.jpg" class="w-[550px] h-[300px]" />
+  <h1 class="text-6xl text-blue-500 text-center capitalize">
+   todos
+  </h1>
   <input
-    class="new-todo"
+    class="text-4xl py-5 px-10 bg-white"
     placeholder="What needs to be done?"
     autoFocus
     [value]="text"
