@@ -14,13 +14,13 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 // } from '@angular/fire/remote-config';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBRqO9xpx7BO0gaJLBQp_LYa-S8RqYQWTo",
-  authDomain: "gdsc-kabarak-codelab.firebaseapp.com",
-  databaseURL: "https://gdsc-kabarak-codelab-default-rtdb.firebaseio.com",
-  projectId: "gdsc-kabarak-codelab",
-  storageBucket: "gdsc-kabarak-codelab.appspot.com",
-  messagingSenderId: "830944198842",
-  appId: "1:830944198842:web:fd361f51486a7716518283"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 export const appConfig: ApplicationConfig = {
