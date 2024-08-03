@@ -14,13 +14,13 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 // } from '@angular/fire/remote-config';
 
 const firebaseConfig = {
-  projectId: 'taskmanager-dca1f',
-  appId: '1:1004540403281:web:8552d4bad4a0a18feb6270',
-  storageBucket: 'taskmanager-dca1f.appspot.com',
-  apiKey: 'AIzaSyBZChDjaLTcu4IJIHvhh-njuzYP0aAjgn8',
-  authDomain: 'taskmanager-dca1f.firebaseapp.com',
-  messagingSenderId: '1004540403281',
-  measurementId: 'G-PHSQP45XN5',
+  apiKey: "AIzaSyBRqO9xpx7BO0gaJLBQp_LYa-S8RqYQWTo",
+  authDomain: "gdsc-kabarak-codelab.firebaseapp.com",
+  databaseURL: "https://gdsc-kabarak-codelab-default-rtdb.firebaseio.com",
+  projectId: "gdsc-kabarak-codelab",
+  storageBucket: "gdsc-kabarak-codelab.appspot.com",
+  messagingSenderId: "830944198842",
+  appId: "1:830944198842:web:fd361f51486a7716518283"
 };
 
 export const appConfig: ApplicationConfig = {
