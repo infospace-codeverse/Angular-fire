@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
 
-npm -g install firebase-tools@latest
+cd task-manager
+
+npm install
 
 ```sh {"id":"01J4BM7RY6NWGHRNGASFMNPS4Z"}
 firebase --version
