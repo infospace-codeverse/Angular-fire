@@ -2,9 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
 
+```sh
 cd task-manager
+```
 
+```sh
 npm install
+```
 
 ```sh {"id":"01J4BM7RY6NWGHRNGASFMNPS4Z"}
 firebase --version
